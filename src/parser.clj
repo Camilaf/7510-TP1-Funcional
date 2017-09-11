@@ -65,7 +65,7 @@
   (valid? rule rule-regex))
 
 (defn valid-query? 
-  "Determines if the received rule is valid."
+  "Determines if the received query is valid."
   [query]
   (valid? query query-regex))
 
@@ -82,12 +82,12 @@
 ;; Obtaining information
 
 (defn obtain-clause-predicate 
-  "Returns the predicate of the clause."
+  "Returns the predicate of the given clause."
   [clause]
   (re-find #"[a-z]+" clause))
 
 (defn obtain-rule-objectives [rule]
-  "Returns a list with the objectives (components) of the rule."
+  "Returns a list with the objectives (components) of the given rule."
   (let [rule-objectives-index 1
         rule-objectives-string (nth (re-matches rule-objectives-regex rule) rule-objectives-index)]
     (clojure.string/split rule-objectives-string #"(?<=\)),")))

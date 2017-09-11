@@ -163,7 +163,7 @@
   (testing "fact: obtain-clause-parameters varon(pepe) should be '(pepe)"
   (is (= (obtain-clause-parameters "varon(pepe)." fact-parameters-regex) 
        '("pepe"))))
-  (testing "fact: obtain-clause-parameters padre(maria,pepe) should be '(pepe)"
+  (testing "fact: obtain-clause-parameters padre(maria,pepe) should be '(maria pepe)"
   (is (= (obtain-clause-parameters "padre(maria,pepe)." fact-parameters-regex) 
        '("maria" "pepe"))))
   (testing "query: obtain-clause-parameters varon(pepe) should be '(pepe)"

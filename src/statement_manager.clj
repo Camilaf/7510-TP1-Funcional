@@ -57,7 +57,7 @@
 
 (defn process-query 
   "Receives a database and a query. Looks for the clauses with the same
-  premise as the query, and returns a list indicating whether the query 
+  predicate as the query, and returns a list indicating whether the query 
   is met or not for each clause."
   [database query]
   (let [filter-predicate-list (filter-by-query-predicate database query)]

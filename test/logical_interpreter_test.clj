@@ -102,10 +102,10 @@
   (testing "padre-de-ana(juan) should be true"
     (is (= (evaluate-query parent-database "padre-de-ana(juan)")
            true)))
-  (testing "padre-de-ana(juan) should be true"
+  (testing "hija-de-juan(pepa) should be true"
     (is (= (evaluate-query parent-database "hija-de-juan(pepa)")
            true)))
-  (testing "padre-de-ana(juan) should be true"
+  (testing "hija-de-juan(celia) should be true"
     (is (= (evaluate-query parent-database "hija-de-juan(celia)")
            false))))           
            
